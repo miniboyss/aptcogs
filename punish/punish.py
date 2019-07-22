@@ -14,10 +14,22 @@ class PunishCog(Cog):
 
     @commands.command(name="punish")
     async def _punish(self, ctx, user: discord.User):
-        """This does stuff!"""
+        """Punish a user by quarantining them to a specified channel. If the quarantine role does not exist, it will be created."""
 
-        #Your code will go here
-        await ctx.send(user)
+        #role stuff
+        guild = ctx.guild
+        perms = discord.Permissions(send_messages=False, read_messages=True)
+        await guild.create_role(name="Quarantined", perms)
+        role = get(guild.roles, name="Quarantined")
+        await user.add_roles(role)
+
+        #channel stuff
+        channel = get(guild.channels, name="quarantine")
+        if channel is None:
+            await guild.create_text_channel("quarantine")
+        channel = get(guild.channels, name="quarantine")
+        await channel.set_permissions(role, send_messages=True)
+        channel.send(f"{user}, you may only talk here now.")
 
 def find_pings(text):
     """returns a list of ids"""
