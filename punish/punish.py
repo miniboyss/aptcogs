@@ -7,7 +7,7 @@ from typing import Any
 Cog: Any = getattr(commands, "Cog", object)
 
 class PunishCog(Cog):
-    """My custom cog that does stuff!"""
+    """A cog that handles quarantining."""
 
     def __init__(self, bot):
         self.bot = bot
