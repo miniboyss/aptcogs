@@ -17,7 +17,7 @@ class PunishCog(Cog):
         """Punish a user by quarantining them to a specified channel. If the quarantine role does not exist, it will be created."""
         guild_perms = ctx.message.author.guild_permissions
         if guild_perms.manage_messages == False:
-            ctx.send("You don't have permission.")
+            await ctx.send("You don't have permission.")
             return
         #role stuff
         guild = ctx.guild
