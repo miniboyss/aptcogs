@@ -25,9 +25,7 @@ class PunishCog(Cog):
         role = get(guild.roles, name="Quarantined")
         member = guild.get_member(user.id)
         await member.add_roles(role)
-        if "quarantined" in [y.name.lower() for y in member.roles]:
-            ctx.send("User is already quarantined!")
-            return
+        
         for channel in guild.channels:
             await channel.set_permissions(role, send_messages=False)
 
