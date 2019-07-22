@@ -1,7 +1,7 @@
 {
-    "name" : "aptcogs",
-    "author" : ["89apt89"],
-    "short" : "Cogs built for the me_irlcraft Discord server.",
-    "description" : "Cogs built for the me_irl Discord server. Can be used elsewhere, too.",
-    "install_msg" : "Thanks for installing!"
+    "NAME" : "aptcogs",
+    "AUTHOR" : ["89apt89"],
+    "SHORT" : "Cogs built for the me_irlcraft Discord server.",
+    "DESCRIPTION" : "Cogs built for the me_irlcraft Discord server. Can be used elsewhere, too.",
+    "INSTALL_MSG" : "Thanks for installing!"
 }
