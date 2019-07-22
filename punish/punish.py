@@ -1,8 +1,11 @@
 import discord
 from discord.ext import commands
+from redbot.core import Config, checks, commands
 from discord.utils import get
 
-class PunishCog(commands.Cog):
+Cog: Any = getattr(commands, "Cog", object)
+
+class PunishCog(Cog):
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
