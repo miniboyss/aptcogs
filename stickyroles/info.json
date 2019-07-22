@@ -1,0 +1,13 @@
+{
+    "AUTHOR": [
+      "89apt89"
+    ],
+    "DESCRIPTION": "Prevent users from leaving to escape roles.",
+    "SHORT": "Prevent users from leaving to escape roles.",
+    "INSTALL_MSG" : "Read the README on GitHub for more info.",
+    "TAGS": [
+      "role",
+      "administration"
+    ],
+    "TYPE": "COG"
+  }
