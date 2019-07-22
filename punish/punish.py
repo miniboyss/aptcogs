@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord.utils import get
 
 def find_pings(text):
     """returns a list of ids"""
@@ -30,12 +31,11 @@ class PunishCog:
         self.bot = bot
 
     @commands.command()
-    async def _punish(self, ctx, name):
+    async def _punish(self, ctx, user: discord.User):
         """This does stuff!"""
 
         #Your code will go here
-        text = find_pings(name)
-        await ctx.send(text)
+        await ctx.send(user)
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
