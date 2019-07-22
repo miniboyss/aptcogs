@@ -1,0 +1,13 @@
+{
+    "author": [
+      "89apt89"
+    ],
+    "description": "Punish spammy users with a quarantine channel.",
+    "short": "Punish spammy users with a quarantine channel.",
+    "install_msg" : "Read the README on GitHub for more info.",
+    "tags": [
+      "role",
+      "administration"
+    ],
+    "type": "COG"
+  }
