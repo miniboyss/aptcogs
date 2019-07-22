@@ -21,7 +21,9 @@ class PunishCog(Cog):
             return
         #role stuff
         guild = ctx.guild
-        await guild.create_role(name="Quarantined")
+        role = get(guild.roles, name="Quarantined")
+        if role is None:
+            await guild.create_role(name="Quarantined")
         role = get(guild.roles, name="Quarantined")
         member = guild.get_member(user.id)
         await member.add_roles(role)
