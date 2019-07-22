@@ -36,6 +36,3 @@ def find_pings(text):
     
         ids.append(text[char1ins[k]+len(char1):char2ins[k]])
     return ids
-
-def setup(bot):
-    bot.add_cog(PunishCog(bot))
