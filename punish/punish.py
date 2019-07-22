@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
-class PunishCog:
+class PunishCog(commands.Cog):
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
