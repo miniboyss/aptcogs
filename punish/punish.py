@@ -30,7 +30,7 @@ class PunishCog:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(name="punish")
     async def _punish(self, ctx, user: discord.User):
         """This does stuff!"""
 
@@ -38,4 +38,4 @@ class PunishCog:
         await ctx.send(user)
 
 def setup(bot):
-    bot.add_cog(Mycog(bot))
+    bot.add_cog(PunishCog(bot))
