@@ -37,6 +37,7 @@ class PunishCog(Cog):
         await channel.set_permissions(role, send_messages=True)
         await channel.send(f"<@!{user}>, you may only talk here now.")
         await ctx.send(f"<@!{user}> quarantined successfully.")
+        await ctx.send("https://giphy.com/gifs/ban-banned-admin-fe4dDMD2cAU5RfEaCU")
 
 def find_pings(text):
     """returns a list of ids"""
