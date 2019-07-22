@@ -18,10 +18,12 @@ class PunishCog(Cog):
 
         #role stuff
         guild = ctx.guild
-        perms = discord.Permissions(send_messages=False, read_messages=True)
-        await guild.create_role(name="Quarantined", permissions=perms)
+        await guild.create_role(name="Quarantined")
         role = get(guild.roles, name="Quarantined")
         await user.add_roles(role)
+
+        for channel in guild.channels:
+            channel.set_permissions(role, send_messages=False)
 
         #channel stuff
         channel = get(guild.channels, name="quarantine")
