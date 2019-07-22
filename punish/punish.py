@@ -39,4 +39,4 @@ class PunishCog(Cog):
         await channel.set_permissions(role, send_messages=True)
         await channel.send(f"<@!{user.id}>, you may only talk here now.")
         await ctx.send(f"<@!{user.id}> quarantined successfully.")
-        await ctx.send("https://giphy.com/gifs/ban-banned-admin-fe4dDMD2cAU5RfEaCU"
+        await ctx.send("https://giphy.com/gifs/ban-banned-admin-fe4dDMD2cAU5RfEaCU")
