@@ -35,8 +35,8 @@ class PunishCog(Cog):
             await guild.create_text_channel("quarantine")
         channel = get(guild.channels, name="quarantine")
         await channel.set_permissions(role, send_messages=True)
-        await channel.send(f"{user}, you may only talk here now.")
-        await ctx.send(f"{user} quarantined successfully.")
+        await channel.send(f"<@!{user}>, you may only talk here now.")
+        await ctx.send(f"<@!{user}> quarantined successfully.")
 
 def find_pings(text):
     """returns a list of ids"""
