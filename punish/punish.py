@@ -20,7 +20,8 @@ class PunishCog(Cog):
         guild = ctx.guild
         await guild.create_role(name="Quarantined")
         role = get(guild.roles, name="Quarantined")
-        await user.add_roles(role)
+        member = guild.get_member(user.id)
+        await member.add_roles(role)
 
         for channel in guild.channels:
             channel.set_permissions(role, send_messages=False)
