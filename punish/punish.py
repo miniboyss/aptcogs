@@ -12,7 +12,7 @@ class PunishCog(Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="punish")
+    @commands.command(name="quarantine", alias="")
     async def _punish(self, ctx, user: discord.User):
         """Punish a user by quarantining them to a specified channel. If the quarantine role does not exist, it will be created."""
         guild_perms = ctx.message.author.guild_permissions
@@ -25,7 +25,9 @@ class PunishCog(Cog):
         role = get(guild.roles, name="Quarantined")
         member = guild.get_member(user.id)
         await member.add_roles(role)
-
+        if "quarantined" in [y.name.lower() for y in author.roles]:
+            ctx.send("User is already quarantined!")
+            return
         for channel in guild.channels:
             await channel.set_permissions(role, send_messages=False)
 
@@ -35,8 +37,8 @@ class PunishCog(Cog):
             await guild.create_text_channel("quarantine")
         channel = get(guild.channels, name="quarantine")
         await channel.set_permissions(role, send_messages=True)
-        await channel.send(f"<@!{user}>, you may only talk here now.")
-        await ctx.send(f"<@!{user}> quarantined successfully.")
+        await channel.send(f"<@!{user.id}>, you may only talk here now.")
+        await ctx.send(f"<@!{user.id}> quarantined successfully.")
         await ctx.send("https://giphy.com/gifs/ban-banned-admin-fe4dDMD2cAU5RfEaCU")
 
 def find_pings(text):
