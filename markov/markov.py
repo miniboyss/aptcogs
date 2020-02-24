@@ -3,7 +3,7 @@ from discord.ext import commands
 from redbot.core import Config, checks, commands
 from discord.utils import get
 from typing import Any
-from markovgen import MarkovGen
+from .markovgen import MarkovGen
 
 Cog: Any = getattr(commands, "Cog", object)
 
