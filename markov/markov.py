@@ -10,7 +10,7 @@ class MarkovCog(Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="test", alias="")
+    @commands.command(name="markov_test", alias="")
     async def _test(self, ctx, user: discord.User):
         print("test")
         ctx.send("test")
