@@ -1,0 +1,12 @@
+{
+    "AUTHOR": [
+      "89apt89"
+    ],
+    "DESCRIPTION": "Generate markov text.",
+    "SHORT": "Generate markov text.",
+    "INSTALL_MSG" : "Read the README on GitHub for more info.",
+    "TAGS": [
+      "chat"
+    ],
+    "TYPE": "COG"
+  }
