@@ -11,6 +11,7 @@ class MarkovCog(Cog):
     def __init__(self, bot):
         self.bot = bot
         self.markov = MarkovGen(open('text.txt'))
+        self.messageCounter = 0
 
     @commands.command(name="markov_test", alias="")
     async def _test(self, ctx):
@@ -18,10 +19,14 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        self.messageCounter = self.messageCounter + 1
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
 
         if message.content.startswith("hey minebot"):
             await message.channel.send(self.markov.generate_markov_text())
+
+        if self.messageCounter >= 100:
+            self.markov = MarkovGen(open('text.txt'))
 
         
