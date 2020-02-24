@@ -23,7 +23,7 @@ class MarkovCog(Cog):
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
 
-        if "hey minebot" in message.content.lower():
+        if "minebot" in message.content.lower():
             await message.channel.send(self.markov.generate_markov_text())
 
         if self.messageCounter >= 100:
