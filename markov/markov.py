@@ -25,6 +25,9 @@ class MarkovCog(Cog):
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
 
+        if message.channel.id != 681648414311841813:
+            return
+            
         if "minebot" in message.content.lower():
             await message.channel.send(self.markov.generate_markov_text().replace("@", "@\\"))
 
