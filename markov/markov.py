@@ -19,6 +19,8 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        if message.author.id == 667544290309832714:
+            return
         self.messageCounter = self.messageCounter + 1
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
