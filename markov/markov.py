@@ -29,5 +29,6 @@ class MarkovCog(Cog):
         if self.messageCounter >= 100:
             print("reloading markov generator")
             self.markov = MarkovGen(open('text.txt'))
+            self.messageCounter = 0
 
         
