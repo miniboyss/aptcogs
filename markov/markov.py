@@ -16,4 +16,5 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        print(message)
+        with open('text.txt', "a+") as f:
+            f.write(message.content)
