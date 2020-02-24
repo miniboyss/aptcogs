@@ -26,7 +26,7 @@ class MarkovCog(Cog):
             f.write(message.content+"\n")
 
         if "minebot" in message.content.lower():
-            await message.channel.send(self.markov.generate_markov_text())
+            await message.channel.send(self.markov.generate_markov_text().replace("@", "@\\"))
 
         if self.messageCounter >= 100:
             print("reloading markov generator")
