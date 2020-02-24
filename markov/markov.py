@@ -11,6 +11,9 @@ class MarkovCog(Cog):
         self.bot = bot
 
     @commands.command(name="markov_test", alias="")
-    async def _test(self, ctx, user: discord.User):
+    async def _test(self, ctx):
         print("test")
-        ctx.send("test")
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        print(message)
