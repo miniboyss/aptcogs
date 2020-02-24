@@ -27,6 +27,7 @@ class MarkovCog(Cog):
             await message.channel.send(self.markov.generate_markov_text())
 
         if self.messageCounter >= 100:
+            print("reloading markov generator")
             self.markov = MarkovGen(open('text.txt'))
 
         
