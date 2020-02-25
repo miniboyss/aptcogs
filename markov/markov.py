@@ -12,7 +12,8 @@ class MarkovCog(Cog):
         self.bot = bot
         with open("text.txt") as f:
             text = f.read()
-        self.markov = markovify.Text(text)
+        print(text)
+        self.markov = markovify.NewlineText(text)
         self.messageCounter = 0
 
     @commands.command(name="markov_test", alias="")
@@ -42,4 +43,4 @@ class MarkovCog(Cog):
     def train(self):
         with open("text.txt") as f:
             text = f.read()
-        self.markov = markovify.Text(text)
+        self.markov = markovify.NewlineText(text)
