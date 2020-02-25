@@ -3,5 +3,6 @@
     "AUTHOR" : ["89apt89"],
     "SHORT" : "Cogs built for the me_irlcraft Discord server.",
     "DESCRIPTION" : "Cogs built for the me_irlcraft Discord server. Can be used elsewhere, too.",
-    "INSTALL_MSG" : "Thanks for installing!"
+    "INSTALL_MSG" : "Thanks for installing!",
+    "REQUIREMENTS": ["markovify"]
 }
