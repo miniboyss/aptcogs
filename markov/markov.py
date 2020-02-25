@@ -27,7 +27,7 @@ class MarkovCog(Cog):
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
 
-        if message.guild.id == 530175564729024514:
+        if message.guild.id == 494295454515986442:
             if message.channel.id != 681648414311841813:
                 return
 
