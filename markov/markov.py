@@ -10,8 +10,9 @@ Cog: Any = getattr(commands, "Cog", object)
 class MarkovCog(Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.markov = None
-        self.train()
+        with open("text.txt") as f:
+            text = f.read()
+        self.markov = markovify.Text(text)
         self.messageCounter = 0
 
     @commands.command(name="markov_test", alias="")
