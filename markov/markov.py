@@ -12,7 +12,6 @@ class MarkovCog(Cog):
         self.bot = bot
         with open("text.txt") as f:
             text = f.read()
-        print(text)
         self.markov = markovify.NewlineText(text)
         self.messageCounter = 0
 
@@ -32,7 +31,7 @@ class MarkovCog(Cog):
             return
 
         if "minebot" in message.content.lower():
-            await message.channel.send(self.markov.make_sentence().replace("@", "@\\"))
+            await message.channel.send(self.markov.make_sentence(tries=100).replace("@", "@\\"))
 
         if self.messageCounter >= 100:
             print("reloading markov generator")
