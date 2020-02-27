@@ -16,4 +16,4 @@ class StatusCog(Cog):
     @commands.command(name="players", alias="")
     async def _players(self, ctx):
         r = requests.get(self.serverURL+"players")
-        ctx.send(r)
+        await ctx.send(r)
