@@ -22,4 +22,4 @@ class StatusCog(Cog):
 
         for player in players['players']:
             playerString = playerString+player+"\n"
-        await ctx.send(f"There are {players['count']} players on.```{playerString}```")
+        await ctx.send(f"There are {players['count']} players on.```md\n{playerString}```")
