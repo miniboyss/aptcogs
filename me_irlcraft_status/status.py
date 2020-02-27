@@ -16,4 +16,10 @@ class StatusCog(Cog):
     @commands.command(name="players", alias="")
     async def _players(self, ctx):
         r = requests.get(self.serverURL+"players")
-        await ctx.send(r.text)
+        players = json.loads(r.text)
+
+        playerString = ""
+
+        for player in players['players']:
+            playerString = playerString+player+"\n"
+        await ctx.send(f"There are {players['count']} players on.```{playerString}```")
