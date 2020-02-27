@@ -21,6 +21,8 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        if message.guild.id != 494295454515986442:
+            return
         if message.author.id == 667544290309832714:
             return
         self.messageCounter = self.messageCounter + 1
