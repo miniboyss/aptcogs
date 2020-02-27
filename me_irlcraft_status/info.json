@@ -1,0 +1,12 @@
+{
+    "AUTHOR": [
+      "89apt89"
+    ],
+    "DESCRIPTION": "Get me_irlcraft status.",
+    "SHORT": "Get me_irlcraft status.",
+    "INSTALL_MSG" : "Read the README on GitHub for more info.",
+    "TAGS": [
+      "chat"
+    ],
+    "TYPE": "COG"
+  }
