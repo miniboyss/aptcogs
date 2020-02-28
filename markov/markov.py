@@ -21,7 +21,8 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if message.guild.id != 494295454515986442:
+        guilds = [494295454515986442, 530175564729024514]
+        if not message.guild.id in guilds:
             return
         if message.author.id == 667544290309832714:
             return
