@@ -14,5 +14,5 @@ class MimicCog(Cog):
         self.serverURL = "http://localhost:4583/"
 
     @commands.command(name="mimic", alias="")
-    async def _mimic(self, ctx, *, message):
+    async def _mimic(self, ctx, message):
         await ctx.send(f"{message}")
