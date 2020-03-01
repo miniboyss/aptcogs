@@ -15,4 +15,6 @@ class MimicCog(Cog):
 
     @commands.command(name="mimic", alias="")
     async def _mimic(self, ctx, message):
+        if message.author.id != 270728755775930369:
+            return
         await ctx.send(f"{message}")
