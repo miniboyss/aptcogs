@@ -21,20 +21,20 @@ class MarkovCog(Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        guilds = [494295454515986442, 530175564729024514]
+        guilds = [217737044347191306]
         if not message.guild.id in guilds:
             return
-        if message.author.id == 667544290309832714:
+        if message.author.id == 617795112126251017:
             return
         self.messageCounter = self.messageCounter + 1
         with open('text.txt', "a+") as f:
             f.write(message.content+"\n")
 
-        if message.guild.id == 494295454515986442:
-            if message.channel.id != 681648414311841813:
+        if message.guild.id == 217737044347191306:
+            if message.channel.id != 250566108258500608:
                 return
 
-        if "minebot" in message.content.lower():
+        if "gogbot" in message.content.lower():
             await message.channel.send(self.markov.make_sentence(tries=100).replace("@", "@\\"))
 
         if self.messageCounter >= 100:
